@@ -359,6 +359,10 @@ a {
   overflow: hidden;
 }
 
+.show--background {
+  display: none;
+}
+
 @media screen and (max-width: 375px) {
   .hamburger {
     display: block;

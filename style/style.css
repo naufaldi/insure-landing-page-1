@@ -471,7 +471,8 @@ a {
   .main--content {
     padding-top: 10rem;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
   }
   .main--content--background {
     display: none;
@@ -496,9 +497,10 @@ a {
   }
   .main--content--slogan {
     display: block;
-    padding: 2em 0.5em;
   }
   .main--content--slogan--container {
+    display: block;
+    width: 100%;
     margin: 2em 0;
   }
   .main--content--banner {

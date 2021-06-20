@@ -1,0 +1,259 @@
+@import "colors";
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+h1,
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3.2em;
+  line-height: 0.9em;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  height: 4.5rem;
+  align-items: center;
+}
+
+.header,
+main,
+footer {
+  max-width: 1440px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: $primary1;
+  color: $neutral3;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  &--content {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    margin: auto auto;
+    &--paragraph {
+      font-size: 1em;
+      padding: 2em 0;
+      font-weight: -400;
+    }
+    &--button {
+      position: relative;
+      z-index: 99;
+      text-decoration: none;
+      color: $neutral3;
+      text-transform: uppercase;
+      border: 0.1rem $neutral3 solid;
+      padding: 0.5em 1em;
+      &:hover {
+        background-color: $neutral3;
+        color: $primary1;
+      }
+    }
+    h1 {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 2em;
+        border-top: 1px $neutral3 solid;
+        top: 25%;
+      }
+    }
+  }
+  &--img {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    z-index: 9;
+    position: relative;
+    top: 10rem;
+    padding: 2rem;
+  }
+  &--background {
+    position: absolute;
+    height: 95%;
+    right: 0;
+    top: -5%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  &--nav {
+    &--menu {
+      display: flex;
+      width: 36vw;
+      justify-content: space-evenly;
+      align-items: center;
+      &--button {
+        text-decoration: none;
+        color: $neutral2;
+        text-transform: uppercase;
+        &:hover {
+          color: $neutral1;
+        }
+        &__square {
+          text-decoration: none;
+          color: $neutral1;
+          text-transform: uppercase;
+          border: 0.1rem $neutral1 solid;
+          padding: 0.5em 1em;
+          &:hover {
+            background-color: $neutral1;
+            color: $neutral3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main--content {
+  padding-top: 20rem;
+  background-color: #fff;
+  max-width: 75%;
+  margin: 0 auto;
+  &--background {
+    position: absolute;
+    height: 50%;
+    top: -25%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  &--h1 {
+    color: $neutral1;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 2em;
+      border-top: 1px $neutral1 solid;
+      top: 23%;
+    }
+  }
+  &--slogan {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+    &--container {
+      width: 20em;
+    }
+    &--title {
+      font-size: 1.2rem;
+      padding: 25px 0;
+    }
+    &--details {
+      line-height: 1.5em;
+      color: $neutral2;
+    }
+  }
+  &--banner {
+    background-color: $primary1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+    margin: 10rem 0;
+    height: 15rem;
+    align-items: center;
+    h1 {
+      color: $neutral3;
+    }
+    a {
+      text-decoration: none;
+      color: $neutral3;
+      text-transform: uppercase;
+      border: 0.1rem $neutral3 solid;
+      padding: 0.5em 1em;
+      z-index: 9;
+      &:hover {
+        background-color: $neutral3;
+        color: $neutral1;
+      }
+    }
+    &--background {
+      position: absolute;
+      height: inherit;
+      right: 12.5%;
+      object-fit: cover;
+      z-index: 1;
+    }
+  }
+}
+
+.footer {
+  background-color: $neutral3;
+  padding-bottom: 5em;
+  &--background {
+    position: absolute;
+    z-index: 1;
+  }
+  &--content {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 99;
+    &--socmed {
+      display: flex;
+      justify-content: space-between;
+      height: 2rem;
+      padding: 5rem 0;
+      border-bottom: 1px $neutral2 solid;
+      &--logo {
+        height: auto;
+      }
+      svg {
+        margin: 0 0.4em;
+        &:hover {
+          cursor: pointer;
+          path {
+            fill: $neutral1;
+          }
+        }
+      }
+    }
+    &--info {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-weight: 900;
+      &--title {
+        padding: 2em 0;
+        color: $neutral2;
+      }
+      &--link {
+        display: block;
+        margin: 0.7em 0;
+        text-decoration: none;
+        color: $neutral1;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+a {
+  font-weight: 900;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 2em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

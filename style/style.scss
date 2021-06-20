@@ -55,7 +55,7 @@ footer {
     }
     &--button {
       position: relative;
-      z-index: 99;
+      z-index: 2;
       text-decoration: none;
       color: $neutral3;
       text-transform: uppercase;
@@ -83,6 +83,9 @@ footer {
     position: relative;
     top: 10rem;
     padding: 2rem;
+    &--mobile{
+        display: none;
+    }
   }
   &--background {
     position: absolute;
@@ -91,6 +94,9 @@ footer {
     top: -5%;
     object-fit: cover;
     z-index: 1;
+    &--mobile{
+        display: none;
+    }
   }
   &--nav {
     &--menu {
@@ -132,6 +138,9 @@ footer {
     top: -25%;
     object-fit: cover;
     z-index: 1;
+    &--mobile{
+        display: none;
+    }
   }
   &--h1 {
     color: $neutral1;
@@ -188,6 +197,9 @@ footer {
       right: 12.5%;
       object-fit: cover;
       z-index: 1;
+      &--mobile{
+     display: none;         
+    }
     }
   }
 }
@@ -198,6 +210,9 @@ footer {
   &--background {
     position: absolute;
     z-index: 1;
+    &--mobile{
+        display: none;
+    }
   }
   &--content {
     width: 75%;
@@ -256,4 +271,199 @@ a {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.hamburger{
+    display: none;
+    &--close{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hamburger{
+        display: block;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+  .header--nav {
+    height: 4rem;
+    display: block;
+    z-index: 999;
+    &--simbol{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+    }
+    // &--menu {
+    //   margin-top: 1em;
+    //   padding-top: 1em;
+    //   width: 100%; //
+    //   display: none;
+    //   text-align: center;
+    //   background-color: $neutral1;
+    //   height: 100vh;
+    //   &--button {
+    //       font-size: 1rem;
+    //     display: block;
+    //     margin: 2em;
+    //     color: $neutral3;
+    //     &__square {
+    //     color: $neutral3;
+    //     text-transform: uppercase;
+    //     border: 0.1rem $neutral3 solid;
+    //     width: 80%; // 80%
+    //     padding: 0.5rem 20%;
+    //     }
+    //   }
+    // }
+    &--menu--button{
+        display: none;
+        &__square{
+            display: none;
+        }
+    }
+  }
+
+  .header {
+    display: block;
+    text-align: center;
+    height: 55em;
+    position: relative;
+    &--content {
+      margin: auto auto;
+      h1{
+          position: relative;
+          z-index: 99;
+        padding: 2.5em 0.5em 0 0.5em;
+        font-size: 2.5em;
+        line-height: 1.2em;
+        &:before {
+            display: none;
+          }
+      }
+      p{
+          padding: 1em 1em;
+      }
+      &--button{
+        display: inline-block;
+        margin-top: 2em;
+        padding: 0.5em 3em;
+      }
+    }
+    &--img {
+      display: none;
+      &--mobile{
+          display: block;
+          width: 100%;
+          height: auto;
+      }
+    }
+    &--background {
+      display: none;
+      &--mobile{
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+  .main--content {
+    padding-top: 10rem;
+    text-align: center;
+    max-width: 100%;
+    &--background {
+      display: none;
+      &--mobile{
+          display: block;
+          position: absolute;
+          right: 0;
+          top: -10%;
+      }
+    }
+    &--h1 {
+      font-size: 2.5em;
+      padding: 0 0.5em;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 3.5em;
+        border-top: 1px $neutral1 solid;
+        top: 7%;
+        left: 30%;
+      }
+    }
+    &--slogan {
+      display: block;
+      padding: 2em 0.5em;
+      &--container{
+          margin: 2em 0;
+      }
+    }
+    &--banner {
+      display: block;
+      position: relative;
+      padding: 2em 2em;
+      height: auto;
+      text-align: center;
+      &--background{
+          display: none;
+          &--mobile{
+            position: absolute;
+            display: block;
+            height: 90%;
+            top: 0;
+            right: 0;
+            z-index: 1;
+          }
+      }
+      &--title{
+          font-size: 2.5em;
+          position: relative;
+          z-index: 9999;
+      }
+      &--button{
+        margin: 2em;
+        display: block;
+      }
+    }
+  }
+
+  .footer {
+    padding-bottom: 5em;
+    &--background {
+      display: none;
+      &--mobile{
+          display: block;
+          position: absolute;
+      }
+    }
+    &--content {
+        text-align: center;
+      &--socmed {
+        display: block;
+        padding: 5rem 0;
+        border-bottom: 1px $neutral2 solid;
+        &--logo {
+            margin-bottom: 1em;
+          height: auto;
+        }
+        svg {
+          margin: 0 0.4em;
+          &:hover {
+            cursor: pointer;
+            path {
+              fill: $neutral1;
+            }
+          }
+        }
+      }
+      &--info {
+        display: block;
+      }
+    }
+  }
 }

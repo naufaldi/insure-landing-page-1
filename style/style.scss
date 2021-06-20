@@ -280,11 +280,23 @@ a {
     }
 }
 
+.overflow-hidden{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 375px) {
     .hamburger{
         display: block;
         &:hover{
             cursor: pointer;
+        }
+        &--close{
+            display: none;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
   .header--nav {
@@ -296,6 +308,31 @@ a {
         justify-content: space-between;
         align-items: center;
         padding: 1em;
+    }
+    .show {
+        position: relative;
+        padding-top: 1em;
+        width: 100%; //
+        display: block;
+        text-align: center;
+        background-color: $neutral1;
+        height: 100vh;
+        a {
+            display: block;
+            color: $neutral3;
+            margin: 2em;
+            &:last-child{
+                color: $neutral3;
+                border: 0.1rem $neutral3 solid;
+                width: 80%; // 80%
+                padding: 0.7rem 20%;
+            }
+        }
+        &--background{
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
     }
     // &--menu {
     //   margin-top: 1em;
@@ -423,7 +460,7 @@ a {
       &--title{
           font-size: 2.5em;
           position: relative;
-          z-index: 9999;
+          z-index: 99;
       }
       &--button{
         margin: 2em;

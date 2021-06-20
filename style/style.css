@@ -353,11 +353,23 @@ a {
   display: none;
 }
 
+.overflow-hidden {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 375px) {
   .hamburger {
     display: block;
   }
   .hamburger:hover {
+    cursor: pointer;
+  }
+  .hamburger--close {
+    display: none;
+  }
+  .hamburger--close:hover {
     cursor: pointer;
   }
   .header--nav {
@@ -376,6 +388,31 @@ a {
         -ms-flex-align: center;
             align-items: center;
     padding: 1em;
+  }
+  .header--nav .show {
+    position: relative;
+    padding-top: 1em;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: #2b272f;
+    height: 100vh;
+  }
+  .header--nav .show a {
+    display: block;
+    color: #fafafa;
+    margin: 2em;
+  }
+  .header--nav .show a:last-child {
+    color: #fafafa;
+    border: 0.1rem #fafafa solid;
+    width: 80%;
+    padding: 0.7rem 20%;
+  }
+  .header--nav .show--background {
+    display: none;
+    position: absolute;
+    bottom: 0;
   }
   .header--nav--menu--button {
     display: none;
@@ -481,7 +518,7 @@ a {
   .main--content--banner--title {
     font-size: 2.5em;
     position: relative;
-    z-index: 9999;
+    z-index: 99;
   }
   .main--content--banner--button {
     margin: 2em;
